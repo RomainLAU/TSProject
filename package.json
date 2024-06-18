@@ -1,0 +1,25 @@
+{
+  "name": "projetts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server",
+    "api": "npx json-server db.json",
+    "build": "tsc index.ts",
+    "prettier": "npx prettier . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "prettier": "3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
+  },
+  "type": "module"
+}

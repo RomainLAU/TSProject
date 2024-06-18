@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" type="module"></script>
+    <link href="index.css" rel="stylesheet" />
+    <link href="reset.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="h1">Search</h1>
+    <form id="searchForm" class="search-form">
+      <h2>Chercher une tache</h2>
+
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search" required />
+
+      <button type="submit">Search</button>
+    </form>
+
+    <h1 class="h1">Tasks</h1>
+    <span>Filter by categorie</span>
+    <select id="categoryFilter">
+      <option value="">Toutes les catégories</option>
+    </select>
+    <br />
+    <span>Filter by date</span>
+    <select id="dateFilter">
+      <option value="Asc">Asc</option>
+      <option value="Desc">Desc</option>
+    </select>
+
+    <ul id="tasksList" class="tasksList"></ul>
+
+    <h1 class="h1">Create task</h1>
+    <form id="taskForm" class="task-form">
+      <h2>Ajouter une nouvelle tâche</h2>
+      <label for="title">Titre:</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="priority">Priorité:</label>
+      <select id="categorySelect" name="prioriti" required></select>
+
+      <button type="submit">Ajouter Tâche</button>
+    </form>
+
+    <h1 class="h1">Create categorie</h1>
+    <form id="categorieForm" class="categorie-form">
+      <h2>Ajouter une nouvelle tâche</h2>
+      <label for="categorie">Categorie:</label>
+      <input type="text" id="categorie" name="categorie" required />
+
+      <button type="submit">Ajouter Tâche</button>
+    </form>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Modale</p>
+      </div>
+    </div>
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editForm">
+                <h2>Modifier la tâche</h2>
+                
+                <label for="editTitle">Titre:</label>
+                <input type="text" id="editTitle" name="title" required>
+                
+                <label for="editDescription">Description:</label>
+                <textarea id="editDescription" name="description" required></textarea>
+                
+                <label for="editDate">Date:</label>
+                <input type="date" id="editDate" name="date" required>
+                
+                <label for="editPriority">Priorité:</label>
+                <select id="editPriority" name="priority" required>
+                    <option value="Faible">Faible</option>
+                    <option value="Urgent">Urgent</option>
+                    <option value="A faire">À faire</option>
+                    <option value="Annexe">Annexe</option>
+                </select>
+                
+                <button type="submit">Mettre à jour</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+  </body>
+</html>
